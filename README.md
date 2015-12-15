@@ -1,0 +1,1 @@
+try embedded Jetty server
