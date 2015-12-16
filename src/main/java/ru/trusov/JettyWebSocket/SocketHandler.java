@@ -1,7 +1,11 @@
 package ru.trusov.JettyWebSocket;
 
-/**
- * Created by user on 15.12.2015.
- */
-public class SocketHandler {
+import org.eclipse.jetty.websocket.server.WebSocketHandler;
+import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
+
+public class SocketHandler extends WebSocketHandler{
+    @Override
+    public void configure(WebSocketServletFactory factory) {
+        factory.register(MySocket.class);
+    }
 }
